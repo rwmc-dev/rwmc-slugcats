@@ -1,0 +1,8 @@
+name: RWMCSlugcats
+version: '${version}'
+main: dev.rwmc.slugcatsplugin.RWMCSlugcats
+api-version: '1.21'
+prefix: RWMCSlugcats
+author: RWMC Development Team
+description: Plugin for RWMC managing Slugcats
+website: https://github.com/rwmc-dev/rwmc-slugcats
