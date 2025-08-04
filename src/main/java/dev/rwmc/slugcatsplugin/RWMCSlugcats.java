@@ -2,6 +2,8 @@ package dev.rwmc.slugcatsplugin;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.tree.LiteralCommandNode;
+import dev.rwmc.slugcatsplugin.listeners.InventoryListener;
+import dev.rwmc.slugcatsplugin.listeners.PlayerListener;
 import dev.rwmc.slugcatsplugin.screens.SelectScreen;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
 import io.papermc.paper.command.brigadier.Commands;
@@ -27,6 +29,9 @@ public final class RWMCSlugcats extends JavaPlugin {
         Logger.log(Level.INFO, "RWMC Slugcats is enabled!");
 
         Items.initialiseItems();
+
+        getServer().getPluginManager().registerEvents(new InventoryListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 
         LiteralCommandNode<CommandSourceStack> slugcatsCommand = Commands.literal("slugcat")
                 .then(Commands.literal("select")
