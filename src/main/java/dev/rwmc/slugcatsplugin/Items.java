@@ -38,7 +38,7 @@ public class Items {
                 .build());
         selectMonk = ItemStack.of(Material.PAPER);
         selectMonk.setData(DataComponentTypes.ITEM_MODEL, Key.key("rwmc:slugcat_monk"));
-        selectMonk.setData(DataComponentTypes.ITEM_NAME, Component.text("Monk"));
+        selectMonk.setData(DataComponentTypes.ITEM_NAME, Component.text("Monk", Style.style(NamedTextColor.YELLOW)));
         selectMonk.setData(DataComponentTypes.LORE, ItemLore.lore()
                 .addLine(Component.text("Weak in body but strong in spirit.", Style.style(NamedTextColor.DARK_GRAY)))
                 .addLine(Component.empty())
@@ -52,7 +52,7 @@ public class Items {
                 .build());
         selectHunter = ItemStack.of(Material.PAPER);
         selectHunter.setData(DataComponentTypes.ITEM_MODEL, Key.key("rwmc:slugcat_hunter"));
-        selectHunter.setData(DataComponentTypes.ITEM_NAME, Component.text("Hunter"));
+        selectHunter.setData(DataComponentTypes.ITEM_NAME, Component.text("Hunter", Style.style(NamedTextColor.RED)));
         selectHunter.setData(DataComponentTypes.LORE, ItemLore.lore()
                 .addLine(Component.text("Strong and quick, with a fierce metabolism", Style.style(NamedTextColor.DARK_GRAY)))
                 .addLine(Component.text("requiring a steady diet of meat.", Style.style(NamedTextColor.DARK_GRAY)))
