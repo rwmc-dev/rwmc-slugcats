@@ -41,6 +41,7 @@ public class InventoryListener implements Listener {
                 user.getPersistentDataContainer().set(Objects.requireNonNull(NamespacedKey.fromString("rwmc:slugcat")), PersistentDataType.STRING, "hunter");
             }
             Utilities.updatePlayerDisplay((Player) user);
+            Utilities.applyPlayerSlugcat((Player) user);
             event.setCancelled(true);
         }
 

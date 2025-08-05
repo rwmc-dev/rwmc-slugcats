@@ -11,5 +11,6 @@ public class PlayerListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         Utilities.updatePlayerDisplay(player);
+        Utilities.applyPlayerSlugcat(player);
     }
 }
