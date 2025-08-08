@@ -41,8 +41,8 @@ public class Utilities {
     public static void setPlayerReqFood(Player player, int reqFood) {
         player.getPersistentDataContainer().set(Objects.requireNonNull(NamespacedKey.fromString("rwmc:req_food")), PersistentDataType.INTEGER, reqFood);
     }
-    public static void setPlayerFood(Player player, int food) {
-        player.getPersistentDataContainer().set(Objects.requireNonNull(NamespacedKey.fromString("rwmc:food")), PersistentDataType.INTEGER, food);
+    public static void setPlayerFood(Player player, double food) {
+        player.getPersistentDataContainer().set(Objects.requireNonNull(NamespacedKey.fromString("rwmc:food")), PersistentDataType.DOUBLE, food);
     }
     public static void setPlayerStarving(Player player, boolean isStarving) {
         player.getPersistentDataContainer().set(Objects.requireNonNull(NamespacedKey.fromString("rwmc:is_starving")), PersistentDataType.BOOLEAN, isStarving);
