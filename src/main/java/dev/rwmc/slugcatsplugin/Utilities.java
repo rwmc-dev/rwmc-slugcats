@@ -79,7 +79,7 @@ public class Utilities {
                 setPlayerReqFood(player, 0);
                 break;
         }
-        setPlayerFood(player, 0);
+        setPlayerFood(player, Math.min(getPlayerFood(player), getPlayerMaxFood(player)));
         setPlayerStarving(player, false);
 
         AttributeInstance attackDmgAttrib = player.getAttribute(Attribute.ATTACK_DAMAGE);
