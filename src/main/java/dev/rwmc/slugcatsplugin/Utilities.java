@@ -48,6 +48,15 @@ public class Utilities {
         player.getPersistentDataContainer().set(Objects.requireNonNull(NamespacedKey.fromString("rwmc:is_starving")), PersistentDataType.BOOLEAN, isStarving);
     }
 
+    public static int getPlayerMaxFood(Player player) {
+        Integer value = player.getPersistentDataContainer().get(Objects.requireNonNull(NamespacedKey.fromString("rwmc:max_food")), PersistentDataType.INTEGER);
+        if (value != null) { return value; } else { return 0; }
+    }
+    public static double getPlayerFood(Player player) {
+        Double value = player.getPersistentDataContainer().get(Objects.requireNonNull(NamespacedKey.fromString("rwmc:food")), PersistentDataType.DOUBLE);
+        if (value != null) { return value; } else { return 0; }
+    }
+
     public static void applyPlayerSlugcat(Player player) {
         String playerSlugcat = getPlayerSlugcat(player);
 
